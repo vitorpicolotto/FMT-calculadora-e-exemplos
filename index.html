@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 8 - Manipulando o DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Aula sobre DOM</h1>
+    <p id="paragrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia rerum reiciendis unde alias, sit velit, debitis assumenda soluta ipsam ipsa doloremque aspernatur tempore culpa ex? Alias sequi officia omnis non?</p>
+    <div id="div-cor"></div>
+
+    <button onclick="alterarTexto()">Alterar Texto</button>
+
+    <div id="div-teste" style="background: blue; height: 100px;">Teste</div>
+    <button onclick="alterarCor()">Alterar Cor</button>
+    <button onclick="centralizar()">Centralizar</button>
+    <button onclick="descentralizar()">Descentralizar</button>
+
+    <script>
+       const h1 = document.getElementById("titulo");
+       
+
+       const paragrafo = document.getElementById("paragrafo"); 
+
+       function alterarTexto (){
+        paragrafo.innerText = "Exemplo de manipulação via DOM."
+
+        // paragrafo.innerHTML = `
+        // <div>
+        //     Exemplo de alteração de texto via DOM
+        // </div>
+        // <ul>
+        //     <li>Lista 1</li>
+        // </ul>
+        
+        // `
+       }   
+       
+       const divCor = document.querySelector("#div-teste");
+
+       function alterarCor(){
+        divCor.style.background = "red";
+       }
+
+       function centralizar(){
+        divCor.classList.add("centralizar");
+       }
+
+       function descentralizar(){
+        divCor.classList.remove("centralizar");
+       }
+
+       
+
+    </script>
+    
+</body>
+</html>

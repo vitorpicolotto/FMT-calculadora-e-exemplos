@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo formulário</title>
+</head>
+
+<body>
+    <form onsubmit="cadastro()">
+        <label for="nome">Nome: </label>
+        <input 
+        type="text" 
+        id="nome" 
+        name="nome" 
+        placeholder="Digite seu nome"/>
+        
+        <label for="curso">Curso: </label>
+        <input 
+        type="text" 
+        id="curso" 
+        name="curso" 
+        placeholder="Digite seu curso"/>
+
+        <button type="submit">Enviar dados</button>
+
+    </form>
+
+    <script>
+
+        /* Passo a passo para usar o form
+        1- [] Fazer o get do elemento form
+        2- [] Adicionar no form o eventListener
+            2.1- [] No event listener diga o nome do evento
+            2.2- [] Passe uma função anônima para receber o evento como parâmetro
+            2.3- [] Use o prevent default no evento recebido como parâmetro
+            2.4- [] Chame a função que quiser
+        3- [] Crie a função que quiser e pegue os dados do form
+        */
+
+
+
+
+        const form = document.querySelector("form"); //1
+
+        form.addEventListener("submit", function(evento){ //2, 2.1, 2.2
+            evento.preventDefault(); // 2.3 - SUBIMIT PAROU AQUI
+
+            chamaOla() //2.4
+        })
+
+        function chamaOla(){
+            const nome = document.getElementById("nome").value; //3
+            alert(`Olá, ${nome}!`)
+        }
+
+    </script>
+    
+</body>
+</html>

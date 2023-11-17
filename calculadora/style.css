@@ -1,0 +1,24 @@
+.formulario{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#opcoes{
+    margin: 20px 0;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#resultado-calculo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}

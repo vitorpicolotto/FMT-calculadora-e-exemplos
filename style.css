@@ -1,0 +1,9 @@
+.centralizar{
+    text-align: center;
+    font-weight: bold;
+    background-color: aquamarine !important;
+    color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
